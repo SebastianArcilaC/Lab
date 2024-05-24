@@ -17,4 +17,5 @@ En este laboratorio, trabajamos con el robot Phantom X Pincher para llevar a cab
 
 ### Tabla de Parámetros DH
 La tabla con los parámetros DH calculados a partir de las longitudes medidas.
+
 ![image](https://github.com/SebastianArcilaC/lab4robotics/assets/115434124/23ad94b5-1554-4520-b4fa-d4e99901f895)
