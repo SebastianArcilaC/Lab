@@ -10,12 +10,18 @@ En este laboratorio, trabajamos con el robot Phantom X Pincher para llevar a cab
 ## Mediciones de Longitudes de Eslabón
 ### Diagrama de Longitudes del Robot
 
+El diagrama de longitudes del robot Phantom X Pincher es fundamental para entender su estructura y funcionamiento. Este diagrama representa las distancias entre las articulaciones del robot y es crucial para la configuración correcta de sus movimientos.
+
 ![Screenshot 2024-05-24 002613](https://github.com/SebastianArcilaC/lab4robotics/assets/115434124/f308cdd9-d2d7-463c-b420-0c59949b4733)
+
+El diagrama de longitudes del robot junto con las direciones en las articulaciones, es una representación visual de los eslabones y articulaciones del Phantom X Pincher. A continuación, se presenta un esquema
+
 ![Screenshot 2024-05-24 002613](https://github.com/SebastianArcilaC/lab4robotics/assets/115434124/a6843383-f5b2-4300-8678-d9908d4a4507)
 
-
+Con las dimensiones medidas, se obtuvieron los parámetros de Denavit-Hartenberg (DH) del robot. Estos parámetros son esenciales para la descripción matemática de la cinemática del robot y se utilizan para calcular las transformaciones entre las diferentes articulaciones.
 
 ### Tabla de Parámetros DH
+
 La tabla con los parámetros DH calculados a partir de las longitudes medidas.
 
 ![image](https://github.com/SebastianArcilaC/lab4robotics/assets/115434124/23ad94b5-1554-4520-b4fa-d4e99901f895)
