@@ -20,7 +20,6 @@ La tabla con los parámetros DH calculados a partir de las longitudes medidas.
 
 ![image](https://github.com/SebastianArcilaC/lab4robotics/assets/115434124/23ad94b5-1554-4520-b4fa-d4e99901f895)
 
-## Simulación en Matlab
 # Simulación del Robot Phantom X Pincher
 
 Este proyecto contiene la simulación del robot Phantom X Pincher utilizando MATLAB. A continuación se presenta el código utilizado para definir y simular el robot.
@@ -116,9 +115,9 @@ Se ha creado un script en Python que permite publicar en cada tópico de control
 
 También se ha implementado un script en Python para suscribirse a los tópicos de controlador de articulación. Este script escucha los mensajes publicados en los tópicos de las articulaciones y retorna la configuración de cinco ángulos en grados. Esto permite monitorear continuamente la posición del robot y actualizar la interfaz de usuario con los valores articulares actuales.
 
-## Resultados
+# Resultados
 
 Estos scripts permiten una integración completa entre MATLAB, Python y ROS, facilitando simulación, control y monitoreo del robot Phantom X Pincher a través de una interfaz de usuario intuitiva y funcional. La combinación de estas herramientas proporciona una plataforma poderosa para la investigación y desarrollo en robótica, permitiendo a los usuarios interactuar de manera efectiva con el robot y analizar su comportamiento en tiempo real.
 
-### Video de demostración
+## Video de demostración
 
