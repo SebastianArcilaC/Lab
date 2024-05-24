@@ -21,24 +21,30 @@ La tabla con los parámetros DH calculados a partir de las longitudes medidas.
 ![image](https://github.com/SebastianArcilaC/lab4robotics/assets/115434124/23ad94b5-1554-4520-b4fa-d4e99901f895)
 
 ## Simulación en Matlab
-# Proyecto de Simulación del Robot Phantom X Pincher
+# Simulación del Robot Phantom X Pincher
 
 Este proyecto contiene la simulación del robot Phantom X Pincher utilizando MATLAB. A continuación se presenta el código utilizado para definir y simular el robot.
 
 ## Código de Simulación en MATLAB
 
+Gracias al codigo que nos proporciono el profesor Pedro Cardenas, se logro mejorar y optimizar para proporcionar una buena simulación.
+
 ### Configuración del Espacio de Trabajo y Opciones de Ploteo
+
 Se estableció el espacio de trabajo (workspace) del robot para asegurar que todas las posibles posiciones y configuraciones del robot sean visualizadas correctamente:
+
 ```matlab
 ws = [-300 300 -300 300 0 350];
 ```
 Las opciones de ploteo (plot_options) incluyen parámetros como el tamaño del robot, la vista de la cámara, la posición de la luz, y la presencia de una base y un suelo:
+
 ```matlab
 plot_options = {'workspace', ws, 'scale', 0.6, 'noa', 'view', [125 25], 'tilesize', 2, ...
                 'ortho', 'lightpos', [2 2 10], ...
                 'floorlevel', 0, 'base'};
 ```
 ### Definición de los Parámetros DH
+
 Los parámetros DH del robot Phantom X Pincher se definieron utilizando el objeto Link del toolbox de Peter Corke. Cada articulación se configuró como un eslabón revoluto con sus respectivos parámetros DH:
 
 ```matlab
@@ -93,3 +99,26 @@ El código proporciona una simulación completa del robot Phantom X Pincher, des
 ### Pose 4
 
 ![Screenshot 2024-04-29 104251](https://github.com/SebastianArcilaC/lab4robotics/assets/115434124/fa121adb-461a-4c80-8c53-64e1924a78bd)
+
+## Interfaz de Usuario (HMI)
+
+### Descripción de la Interfaz
+
+Para facilitar la interacción con el robot Phantom X Pincher, se ha desarrollado una interfaz de usuario (Basado en el controller de Felipe Gonzalez, se menciona para darle los respectivos reconocimientos) que permite a los usuarios controlar y monitorear el robot de manera intuitiva y eficiente. Esta interfaz está diseñada para permitir el envío de comandos a las distintas articulaciones, la interfaz fue modificada para que permita el manejo de los 5 servomotores.
+
+### Conexión con Python
+
+Para integrar el control del robot con la interfaz de usuario, se han desarrollado scripts en Python que permiten la comunicación con los motores Dynamixel del robot a través de ROS. A continuación, se describen los scripts utilizados para la publicación y suscripción en los tópicos de ROS.
+
+El código incluye un panel de control que permite a los usuarios seleccionar entre cinco poses predefinidas. Estas poses representan configuraciones específicas del robot que han sido programadas para demostrar sus capacidades de movimiento. Al seleccionar una de estas poses, el usuario puede enviar la configuración correspondiente al robot con solo un clic, facilitando la demostración de las distintas posiciones del manipulador.
+
+Se ha creado un script en Python que permite publicar en cada tópico de controlador de articulación. Este script se asegura de que los comandos enviados a las articulaciones respeten los límites articulares predefinidos, evitando movimientos que puedan dañar el robot o exceder sus capacidades mecánicas.
+
+También se ha implementado un script en Python para suscribirse a los tópicos de controlador de articulación. Este script escucha los mensajes publicados en los tópicos de las articulaciones y retorna la configuración de cinco ángulos en grados. Esto permite monitorear continuamente la posición del robot y actualizar la interfaz de usuario con los valores articulares actuales.
+
+## Resultados
+
+Estos scripts permiten una integración completa entre MATLAB, Python y ROS, facilitando simulación, control y monitoreo del robot Phantom X Pincher a través de una interfaz de usuario intuitiva y funcional. La combinación de estas herramientas proporciona una plataforma poderosa para la investigación y desarrollo en robótica, permitiendo a los usuarios interactuar de manera efectiva con el robot y analizar su comportamiento en tiempo real.
+
+### Video de demostración
+
