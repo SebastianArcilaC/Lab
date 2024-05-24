@@ -9,3 +9,5 @@ En este laboratorio, trabajamos con el robot Phantom X Pincher para llevar a cab
 
 ## Mediciones de Longitudes de Eslabón
 ### Diagrama de Longitudes del Robot
+
+![Screenshot 2024-05-24 002613](https://github.com/SebastianArcilaC/lab4robotics/assets/115434124/f308cdd9-d2d7-463c-b420-0c59949b4733)
