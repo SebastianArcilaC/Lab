@@ -66,3 +66,30 @@ Robot.teach(q);
 hold on;
 trplot(eye(4), 'length', 24);
 ```
+### Resultados de las poses con sus respectivos angulos
+
+El código proporciona una simulación completa del robot Phantom X Pincher, desde la definición de los parámetros DH hasta la visualización y cálculo de la cinemática directa. La configuración visualizada coincide con la configuración teórica establecida por los parámetros DH.
+
+### Pose Home
+
+![Screenshot 2024-04-29 104330](https://github.com/SebastianArcilaC/lab4robotics/assets/115434124/e90507af-fc76-4d97-abd0-c7070fa102f6)
+
+
+### Pose 1
+
+![Screenshot 2024-04-29 103641](https://github.com/SebastianArcilaC/lab4robotics/assets/115434124/fc0fe44e-fcb4-402a-81e6-00987bbe76a6)
+
+
+### Pose 2
+
+![Screenshot 2024-04-29 103918](https://github.com/SebastianArcilaC/lab4robotics/assets/115434124/b75e0a5e-a945-4300-abc7-c213cd9f471d)
+
+
+### Pose 3
+
+![Screenshot 2024-04-29 104150](https://github.com/SebastianArcilaC/lab4robotics/assets/115434124/9cea936e-2a59-4fa3-9128-1ad571152f46)
+
+
+### Pose 4
+
+![Screenshot 2024-04-29 104251](https://github.com/SebastianArcilaC/lab4robotics/assets/115434124/fa121adb-461a-4c80-8c53-64e1924a78bd)
