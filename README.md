@@ -158,5 +158,30 @@ def move_joint_sequentially(joint, goal, actual):
 
 Estos scripts permiten una integración completa entre MATLAB, Python y ROS, facilitando simulación, control y monitoreo del robot Phantom X Pincher a través de una interfaz de usuario intuitiva y funcional. La combinación de estas herramientas proporciona una plataforma poderosa para la investigación y desarrollo en robótica, permitiendo a los usuarios interactuar de manera efectiva con el robot y analizar su comportamiento en tiempo real.
 
+### Pose Home
+
+![home](https://github.com/SebastianArcilaC/lab4robotics/assets/115434124/d64fa918-326d-43eb-86fa-278724e3d317)
+
+
+### Pose 1
+
+![pose 1](https://github.com/SebastianArcilaC/lab4robotics/assets/115434124/fe097c56-145b-45e9-af08-cb328c388c4c)
+
+
+### Pose 2
+
+![pose 2](https://github.com/SebastianArcilaC/lab4robotics/assets/115434124/8374ccc0-58e1-417e-b51c-262b6c35b844)
+
+
+### Pose 3
+
+![pose 3](https://github.com/SebastianArcilaC/lab4robotics/assets/115434124/2cb49569-d4b9-43b4-8b41-8cffeaa1a3e9)
+
+
+### Pose 4
+
+![pose 4](https://github.com/SebastianArcilaC/lab4robotics/assets/115434124/bdd15a57-b83e-4395-88f0-1ab5504442a4)
+
+
 ## Video de demostración
 
