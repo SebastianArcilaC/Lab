@@ -7,6 +7,10 @@ from std_msgs.msg import String
 from sensor_msgs.msg import JointState
 from dynamixel_workbench_msgs.srv import DynamixelCommand
 
+# Autores
+# Joan Sebastian Arcila Cardozo
+# Gustavo Adolfo Ropero Bastidas
+
 posicion = [0, 0, 0, 0, 0]
 Limite = [400, 400, 400, 400, 400]
 Caso1 = [25, 25, 20, -20, 0]
