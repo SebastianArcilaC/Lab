@@ -130,11 +130,29 @@ def send_motor_command(command, id_num, addr_name, value, time):
         print(str(exc))
 ```
 
-El código incluye un panel de control que permite a los usuarios seleccionar entre cinco poses predefinidas. Estas poses representan configuraciones específicas del robot que han sido programadas para demostrar sus capacidades de movimiento. Al seleccionar una de estas poses, el usuario puede enviar la configuración correspondiente al robot con solo un clic, facilitando la demostración de las distintas posiciones del manipulador.
+El código incluye un panel de control que permite a los usuarios seleccionar entre cinco poses predefinidas. Estas poses representan configuraciones específicas del robot que han sido programadas para demostrar sus capacidades de movimiento. Al seleccionar una de estas poses, el usuario puede enviar la configuración correspondiente al robot con solo ingresar el número de la pose, facilitando la demostración de las distintas posiciones del manipulador.
 
+```python
+caso = int(input())
+MetaAngulos = Angulos[caso - 1]
+MetaCasos = Resolucion[caso - 1]
+```
 Se ha creado un script en Python que permite publicar en cada tópico de controlador de articulación. Este script se asegura de que los comandos enviados a las articulaciones respeten los límites articulares predefinidos, evitando movimientos que puedan dañar el robot o exceder sus capacidades mecánicas.
 
 También se ha implementado un script en Python para suscribirse a los tópicos de controlador de articulación. Este script escucha los mensajes publicados en los tópicos de las articulaciones y retorna la configuración de cinco ángulos en grados. Esto permite monitorear continuamente la posición del robot y actualizar la interfaz de usuario con los valores articulares actuales.
+
+```python
+def subscribe_to_joint_states():
+    rospy.init_node('joint_listener', anonymous=True)
+    rospy.Subscriber("/dynamixel_workbench/joint_states", JointState, update_positions)
+
+def move_joint_sequentially(joint, goal, actual):
+    N = 5
+    delta = ((goal - actual) / N)
+    for i in range(N):
+        send_motor_command('', (joint + 1), 'Goal_Position', int(actual + delta * (i + 1)), 0.5)
+        time.sleep(0.1)
+```
 
 # Resultados
 
