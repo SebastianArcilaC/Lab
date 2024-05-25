@@ -185,3 +185,4 @@ Estos scripts permiten una integración completa entre MATLAB, Python y ROS, fac
 
 ## Video de demostración
 
+https://drive.google.com/open?id=1HEJnh3-ZIxiy_YTtyWWjMR79r24niD4q&usp=drive_copy
