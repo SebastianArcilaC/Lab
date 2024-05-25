@@ -1,7 +1,7 @@
 # Laboratorio 4
 
-### Joan Sebastian Arcila Cardozo
-### Gustavo Adolfo Ropero Bastidas
+## Joan Sebastian Arcila Cardozo
+## Gustavo Adolfo Ropero Bastidas
 
 ## Universiad Nacional de Colombia
 
@@ -156,7 +156,7 @@ def move_joint_sequentially(joint, goal, actual):
 
 # Resultados
 
-Estos scripts permiten una integración completa entre MATLAB, Python y ROS, facilitando simulación, control y monitoreo del robot Phantom X Pincher a través de una interfaz de usuario intuitiva y funcional. La combinación de estas herramientas proporciona una plataforma poderosa para la investigación y desarrollo en robótica, permitiendo a los usuarios interactuar de manera efectiva con el robot y analizar su comportamiento en tiempo real.
+Estos scripts permiten una integración completa entre MATLAB, Python y ROS, facilitando simulación, control y monitoreo del robot Phantom X Pincher a través de una interfaz de usuario intuitiva y funcional. La combinación de estas herramientas proporciona una plataforma poderosa para la investigación y desarrollo en robótica, permitiendo a los usuarios interactuar de manera efectiva con el robot y analizar su comportamiento en tiempo real. Se cumplió con todos los requerimientos del laboratorio en el video se da prueba de ello.
 
 ### Pose Home
 
