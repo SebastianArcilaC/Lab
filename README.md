@@ -107,6 +107,8 @@ El código proporciona una simulación completa del robot Phantom X Pincher, des
 
 ## Interfaz de Usuario (HMI)
 
+Los servomotores utilizados en robots como el Phantom X Pincher generalmente emplean un rango de valores de 0 a 1023 debido a la resolución de su sistema de control de posición. Esta resolución está basada en la conversión analógica-digital y en la capacidad del controlador del servomotor para manejar y ajustar posiciones angulares precisas. El rango de 0 a 1023 se asigna a la capacidad del servomotor para moverse dentro de su ángulo total permitido. Según Dymanixel Wizard 2.0, los servomotores tienen un rango de 0 a 300 grados. Esto significa que cada incremento en el valor de control representa un cambio muy pequeño y preciso en el ángulo del servomotor. Para el debido funcionamiento del codigo Python se hizo la relación de los grados entre la resolución de los servomotores para obtener los valores esperados.
+
 ### Descripción de la Interfaz
 
 Para facilitar la interacción con el robot Phantom X Pincher, se ha desarrollado una interfaz de usuario (Basado en el controller de Felipe Gonzalez, se menciona para darle los respectivos reconocimientos) que permite a los usuarios controlar y monitorear el robot de manera intuitiva y eficiente. Esta interfaz está diseñada para permitir el envío de comandos a las distintas articulaciones, la interfaz fue modificada para que permita el manejo de los 5 servomotores.
@@ -114,6 +116,19 @@ Para facilitar la interacción con el robot Phantom X Pincher, se ha desarrollad
 ### Conexión con Python
 
 Para integrar el control del robot con la interfaz de usuario, se han desarrollado scripts en Python que permiten la comunicación con los motores Dynamixel del robot a través de ROS. A continuación, se describen los scripts utilizados para la publicación y suscripción en los tópicos de ROS.
+
+```python
+# Función para enviar comandos a los motores Dynamixel
+def send_motor_command(command, id_num, addr_name, value, time):
+    rospy.wait_for_service('dynamixel_workbench/dynamixel_command')
+    try:
+        dynamixel_command = rospy.ServiceProxy('/dynamixel_workbench/dynamixel_command', DynamixelCommand)
+        result = dynamixel_command(command, id_num, addr_name, value)
+        rospy.sleep(time)
+        return result.comm_result
+    except rospy.ServiceException as exc:
+        print(str(exc))
+```
 
 El código incluye un panel de control que permite a los usuarios seleccionar entre cinco poses predefinidas. Estas poses representan configuraciones específicas del robot que han sido programadas para demostrar sus capacidades de movimiento. Al seleccionar una de estas poses, el usuario puede enviar la configuración correspondiente al robot con solo un clic, facilitando la demostración de las distintas posiciones del manipulador.
 
